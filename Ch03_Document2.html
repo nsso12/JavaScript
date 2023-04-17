@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_Document2.html</title>
+    <style>
+        p {
+            color: blue;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            cursor: pointer;
+            transition: margin-left 0.1s ease-out;
+            /* margin-left: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <h1>인라인 css 테스트</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, labore itaque natus eum aliquam est maxime non, adipisci similique dicta eveniet placeat hic incidunt praesentium modi? Fugiat vel suscipit vitae.</p>
+    <div class="box" onclick="a()">눌러보세요</div>
+    <script>
+        // 위의 box div 를 클릭하면 우측으로 100px 이동 하도록 프로그래밍 해보세요.
+
+        function a() {
+            document.querySelector("div").style.marginLeft = "100px";
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- // 인라인 : 태그에 직접적으로 효과를 적용하는 것
+// . => object 호출인 것 명심
+// sytle 안의 margin-left => js 안에서는 marginLeft
+// js 안에서는 - 가 연산자로 인식되기 때문 -->

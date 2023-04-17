@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_Document3.html</title>
+    <style>
+        p {
+            color: blue;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            cursor: pointer;
+            transition: margin-left 0.1s ease-out;
+            /* margin-left: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <h1>인라인 css 테스트</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, labore itaque natus eum aliquam est maxime non, adipisci similique dicta eveniet placeat hic incidunt praesentium modi? Fugiat vel suscipit vitae.</p>
+    <button onclick="reset()">Reset</button>
+    <div class="box" onclick="a()">눌러보셈</div>
+    <script>
+        // 함수 안에서 사용할 변수를 페이지 로딩 시점에 미리 초기 값을 대입해서 만들어 둔다.
+        let num = 0;
+
+        // 위의 box div 를 클릭하면 우측으로 100px 이동 하도록 프로그래밍 해보세요.
+        function a() {
+            num += 100;
+            document.querySelector(".box").style.marginLeft = num + "px";
+        }
+
+        function reset() {
+            num = 0;
+            document.querySelector(".box").style.marginLeft = num + "px";
+        }
+    </script>
+</body>
+</html>
+
+<!-- // js에서는 문자열과 int형을 더하면 => 문자열
+// "" 와 '' 가 구분되어 있지 않음   -->
